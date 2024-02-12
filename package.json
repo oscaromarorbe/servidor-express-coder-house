@@ -1,0 +1,39 @@
+{
+  "name": "servidor-express-coder-house",
+  "version": "1.0.0",
+  "description": "express server",
+  "main": "index.js",
+  "scripts": {
+    "test": "npm run test",
+    "start": "nodemon index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/oscaromarorbe/servidor-express-coder-house.git"
+  },
+  "keywords": [
+    "express",
+    "server",
+    "coderhouse",
+    "coder",
+    "house",
+    "challenge",
+    "backend",
+    "back",
+    "end",
+    "back-end",
+    "expressjs",
+    "js",
+    "javascript"
+  ],
+  "author": "Oscar Orbe",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/oscaromarorbe/servidor-express-coder-house/issues"
+  },
+  "homepage": "https://github.com/oscaromarorbe/servidor-express-coder-house#readme",
+  "dependencies": {
+    "express": "^4.18.2",
+    "nodemon": "^3.0.3"
+  }
+}
