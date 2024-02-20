@@ -1,10 +1,8 @@
-const { persistProducts } = require('../persistProducts.js')
 const { ProductManager } = require('../product-manager.js')
 const express = require('express')
 let router = express.Router()
 
 const productManager = new ProductManager()
-persistProducts(productManager)
 
 router.get('/', async (request, response) => {
   const products = await productManager.getProducts()
@@ -20,26 +18,7 @@ router.get('/:pid', async (request, response) => {
 })
 
 router.post('/', async (request, response) => {
-  const {
-    title,
-    description,
-    code,
-    price,
-    stock,
-    category,
-    status,
-    thumbnails
-  } = request.body
-  const newProduct = await productManager.addProduct(
-    title,
-    description,
-    code,
-    price,
-    stock,
-    category,
-    status,
-    thumbnails
-  )
+  const newProduct = await productManager.addProduct(request.body)
   if (newProduct) response.send(newProduct)
 })
 

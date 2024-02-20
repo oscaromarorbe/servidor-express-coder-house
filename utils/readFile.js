@@ -1,7 +1,4 @@
-const readFile = async (fileSystem, productDirPath, productsFilePath) => {
-  await fileSystem.promises.mkdir(productDirPath, {
-    recursive: true
-  })
+const readFile = async (fileSystem, productsFilePath) => {
   if (!fileSystem.existsSync(productsFilePath)) {
     await fileSystem.promises.writeFile(productsFilePath, '[]')
   }
